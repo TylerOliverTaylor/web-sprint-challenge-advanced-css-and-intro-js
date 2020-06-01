@@ -235,10 +235,13 @@ function getArtistByIndex(artists, index) {
 
 /* Task 4: Create a function called get20s() that takes data as an argument and returns an array with names of artists who were born the 20th century (1900-2000) */
 
-function get20s(/* Code here */){
-
-  /* Code here */
-
+function get20s(artists){
+  for (let i = 0; i<artists.length; i++){
+    let time = artists[i].years;
+    if(time.startsWith("19")){
+    console.log(artists[i].name);
+    }
+  }
 }
 
 
@@ -252,8 +255,9 @@ function get20s(/* Code here */){
  * 
  * Note that sucessfully invoking this function multiple times without refreshing your browser will continuously remove artists from the array until there are none left. If you refresh your browser, the data will reset.  
 */
-function removeArtist(/*code here*/) {
-    /* code here */
+function removeArtist(artists, index) {
+    artists.splice[index];
+    console.log(artists.length)
   }
   
   /**
