@@ -256,7 +256,7 @@ function get20s(artists){
  * Note that sucessfully invoking this function multiple times without refreshing your browser will continuously remove artists from the array until there are none left. If you refresh your browser, the data will reset.  
 */
 function removeArtist(artists, index) {
-    artists.splice[index];
+    artists.splice(index,index);
     console.log(artists.length)
   }
   
@@ -276,10 +276,18 @@ nationality: Your Nationality Here
 bio: Add 1-2 sentences (or use lorem ipsum) 
 
 At the end, this function should console.log() the new array with information added"*/
-
-function addArtist(/* Code here */){
-
-    /* Code here */
+const Tyler = [
+ { "id": 21,
+ "name": "Tyler",
+ "years": "1990 - current",
+ "genre": "Metal Art",
+ "nationality": "American",
+ "bio": "Has been sculpting for 8 years",
+}
+]
+function addArtist(artists){
+  artists.push(Tyler);
+  console.log(artists)
 
   }
 
@@ -291,10 +299,13 @@ and returns an array with names of artists who painted more than 100 paintings.
 
 For example lotsOfArt(artists); will return ["Amedeo Modigliani", "Rene Magritte", ..."Albrecht Dürer"]*/
 
-function lotsOfArt(/* Code here */){
-
-  /* Code here */
-
+function lotsOfArt(artists){
+  for(let i = 0; i < artists.length; i++){
+    let quantity = artists[i].paintings;
+    if (quantity >= 100){
+      console.log(artists[i].name)
+    }
+  }
 }
 
 
